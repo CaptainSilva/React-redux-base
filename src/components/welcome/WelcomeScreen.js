@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 class WelcomeScreen extends Component {
   render(){
     return(
       <View
-        style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-
+        style={style.container}>
         <Text
-          style={{
-            textAlign: 'center',
-          }}>
+          style={style.centerText}>
           Welcome Screen
         </Text>
         <Button
-        style={{
-          textAlign: 'center',
+          style={style.centerText}
           title='Navigate'
-          onPress={this.navigateTo()}
-        }}/>
+          onPress={() => this.navigateTo()}
+        />
       </View>
     );
   }
 
   navigateTo(){
+    Actions.login();
+  }
+}
 
+const style = {
+  container: {
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  centerText: {
+    textAlign: 'center'
   }
 }
 

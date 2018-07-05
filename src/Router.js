@@ -7,7 +7,7 @@ const RouterComponent = () => {
   return (
     <Router>
       <Scene key="root">
-        <Scene key="welcome" component={ WelcomeScreen } title="Welcome"/>
+        <Scene key="welcome" component={ WelcomeScreen } hideNavBar={true} title="Welcome"/>
         <Scene key="login" component={LoginScreen} title="Please Login"/>
       </Scene>
     </Router>
